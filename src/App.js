@@ -11,8 +11,11 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
 import profile from "./assets/profile.png"; // ✅ make sure this exists
+function App() {
+  useEffect(() => {
+    document.title = "Omkar Portfolio";
+  }, [])
 
-export default function App() {
   const [open, setOpen] = useState(false);
 
   // 🎮 3D Tilt Logic
