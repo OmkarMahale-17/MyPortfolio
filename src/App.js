@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import ParticlesBg from "./ParticlesBg";
@@ -11,10 +11,11 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
 import profile from "./assets/profile.png"; // ✅ make sure this exists
+
 function App() {
   useEffect(() => {
-    document.title = "Omkar Portfolio";
-  }, [])
+    document.title = "omkar-portfolio";
+  }, []);
 
   const [open, setOpen] = useState(false);
 
@@ -171,53 +172,38 @@ function App() {
       </Section>
 
       {/* CONTACT */}
-
-
       <Section title="Connect With Me" id="contact">
         <div className="bg-white/5 backdrop-blur-xl p-8 rounded-xl border border-white/10 max-w-xl mx-auto flex flex-col items-center gap-6">
 
-          {/* 🔗 Social Icons */}
           <div className="flex gap-8 text-3xl">
 
-            {/* GitHub */}
-            <a
-              href="https://github.com/OmkarMahale-17"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://github.com/OmkarMahale-17" target="_blank" rel="noopener noreferrer">
               <FaGithub className="hover:text-blue-400 hover:scale-125 transition duration-300" />
             </a>
 
-            {/* LinkedIn */}
-            <a
-              href="https://www.linkedin.com/in/omkar-mahale-013716243"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://www.linkedin.com/in/omkar-mahale-013716243" target="_blank" rel="noopener noreferrer">
               <FaLinkedin className="hover:text-blue-500 hover:scale-125 transition duration-300" />
             </a>
 
-            {/* Email */}
             <a href="mailto:omkarmahale62@gmail.com">
               <MdEmail className="hover:text-purple-400 hover:scale-125 transition duration-300" />
             </a>
 
-            {/* Phone */}
             <a href="tel:9845941429">
               <FiPhone className="hover:text-green-400 hover:scale-125 transition duration-300" />
             </a>
 
           </div>
 
-          {/* ✨ Text */}
           <p className="text-gray-400 text-sm text-center">
             Let’s connect and build something amazing 🚀
           </p>
 
         </div>
-
       </Section>
 
     </div>
   );
 }
+
+export default App;
